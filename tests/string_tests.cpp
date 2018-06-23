@@ -581,6 +581,7 @@ TEST_CASE("Capitalize to modify the first character of a string", "[String], [py
         REQUIRE(string.capitalize() == String());
     }
 }
+
 TEST_CASE("Appending to the endf of a string", "[String], [modifiers], [append]")
 {
     SECTION("A populated string and a c-string")
