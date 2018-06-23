@@ -276,6 +276,15 @@ String::self_type& String::swapcase()
     return *this;
 }
 
+String::self_type& String::capitalize()
+{
+    if(catch_null_exception(_data)) { return *this; }
+
+    _data[0] = std::toupper(_data[0]);
+
+    return *this;
+}
+
 bool String::isupper()
 {
     bool result = false;

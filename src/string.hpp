@@ -98,6 +98,7 @@ public:
     self_type& upper();
     self_type& lower();
     self_type& swapcase();
+    self_type& capitalize();
     
     bool isupper();
     bool islower();

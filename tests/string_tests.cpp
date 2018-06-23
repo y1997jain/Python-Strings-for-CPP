@@ -560,6 +560,27 @@ TEST_CASE("swapcase() to change casing of a string", "[String], [python], [swapc
     } 
 }
 
+TEST_CASE("Capitalize to modify the first character of a string", "[String], [python], [capitalize]")
+{
+    SECTION("A lowercased String")
+    {
+        String string("alex");
+
+        REQUIRE(string.capitalize() == "Alex");
+    }
+    SECTION("An uppercased string")
+    {
+        String string("ALEX");
+
+        REQUIRE(string.capitalize() == "ALEX");
+    }
+    SECTION("An empty string")
+    {
+        String string;
+
+        REQUIRE(string.capitalize() == String());
+    }
+}
 TEST_CASE("Appending to the endf of a string", "[String], [modifiers], [append]")
 {
     SECTION("A populated string and a c-string")
